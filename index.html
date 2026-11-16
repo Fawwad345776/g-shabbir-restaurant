@@ -79,6 +79,21 @@
   .item small{display:block;color:#bba792;font-size:.88rem}
   .item .dots{flex:1}
   .item .price{color:var(--saffron);font-weight:600;white-space:nowrap}
+  .rice{margin-top:44px}
+  .rice h3,.mcat h3{font-size:1.5rem;color:var(--saffron);margin-bottom:14px}
+  .tbl{overflow-x:auto;border:1px solid rgba(251,244,232,.15);border-radius:16px}
+  table{width:100%;border-collapse:collapse}
+  th,td{padding:14px 16px;text-align:right;border-bottom:1px dashed rgba(251,244,232,.15)}
+  th{color:#bba792;font-weight:600;font-size:.85rem;text-transform:uppercase;letter-spacing:.06em}
+  th:first-child,td:first-child{text-align:left}
+  td{color:var(--saffron);font-weight:600;white-space:nowrap}
+  td b{color:var(--cream);font-family:Fraunces,serif;font-size:1.15rem;font-weight:600}
+  .ur{display:block;color:#a8937f;font-size:.85rem;font-weight:400}
+  tr.hot td:first-child b::after{content:" 🌶️"}
+  tbody tr:last-child td{border-bottom:none}
+  .menu-cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px 50px;margin-top:50px}
+  .mcat .item{padding:11px 0}
+  .mcat .item h4{font-size:1.05rem}
   .note{margin-top:28px;color:#a8937f;font-size:.88rem}
   @media(max-width:760px){.menu-grid{grid-template-columns:1fr}}
 
@@ -110,18 +125,19 @@
 
   .reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease, transform .7s ease}
   .reveal.in{opacity:1;transform:none}
+  @media(max-width:480px){.logo{font-size:1.25rem}.lg{display:none}.nav-cta{padding:9px 16px;font-size:.85rem}th,td{padding:12px 5px;font-size:.8rem}th{font-size:.62rem;letter-spacing:.02em}td b{font-size:.95rem}.ur{font-size:.75rem}th:first-child,td:first-child{padding-left:12px}th:last-child,td:last-child{padding-right:12px}.stats{gap:18px}.stats b{font-size:1.15rem;line-height:1.3;white-space:nowrap}.stats small{line-height:1.3;display:block}td b{white-space:normal}}
 </style>
 </head>
 <body>
 
 <nav>
   <div class="wrap">
-    <a href="#" class="logo">G. Shabbir <span>Restaurant</span></a>
+    <a href="#" class="logo">G. Shabbir <span class="lg">Restaurant & Catering</span></a>
     <div class="links">
       <a href="#specials">Specials</a>
       <a href="#menu">Menu</a>
       <a href="#visit">Visit</a>
-      <a href="tel:+923022256100" class="btn btn-primary nav-cta">📞 Call to Order</a>
+      <a href="tel:+923022256100" class="btn btn-primary nav-cta">📞 <span class="lg">Call to </span>Order</a>
     </div>
   </div>
 </nav>
@@ -139,7 +155,7 @@
       <div class="stats">
         <div><b>4.3 ★</b><small>563+ Google reviews</small></div>
         <div><b>10am–12am</b><small>Open 7 days</small></div>
-        <div><b>Rs</b><small>Budget friendly</small></div>
+        <div><b>Rs 200+</b><small>Plates from</small></div>
       </div>
     </div>
 
@@ -224,20 +240,18 @@
 <section id="menu">
   <div class="wrap">
     <span class="eyebrow" style="color:var(--saffron)">Menu</span>
-    <h2 class="sec-title reveal">Plates & portions</h2>
-    <p class="sec-sub reveal">Dine in, take away, or call ahead for delivery. Bulk orders for dawats and office lunches welcome.</p>
+    <h2 class="sec-title reveal">Menu & Prices</h2>
+    <p class="sec-sub reveal">Dine in, take away, or home delivery. Catering for dawats and office lunches.</p>
 
-    <div class="menu-grid">
-      <div class="item"><div><h4>Beef Pulao — Plate</h4><small>Served with raita & salad</small></div><span class="dots"></span><span class="price">Rs ___</span></div>
-      <div class="item"><div><h4>Chicken Biryani — Plate</h4><small>Served with raita & salad</small></div><span class="dots"></span><span class="price">Rs ___</span></div>
-      <div class="item"><div><h4>Beef Pulao — Half Kg</h4><small>Takeaway / delivery</small></div><span class="dots"></span><span class="price">Rs ___</span></div>
-      <div class="item"><div><h4>Chicken Biryani — Half Kg</h4><small>Takeaway / delivery</small></div><span class="dots"></span><span class="price">Rs ___</span></div>
-      <div class="item"><div><h4>Beef Pulao — 1 Kg</h4><small>Family size</small></div><span class="dots"></span><span class="price">Rs ___</span></div>
-      <div class="item"><div><h4>Chicken Biryani — 1 Kg</h4><small>Family size</small></div><span class="dots"></span><span class="price">Rs ___</span></div>
-      <div class="item"><div><h4>Raita</h4><small>Extra</small></div><span class="dots"></span><span class="price">Rs ___</span></div>
-      <div class="item"><div><h4>Cold Drink</h4><small>Regular / 1.5L</small></div><span class="dots"></span><span class="price">Rs ___</span></div>
+    <div class="rice reveal">
+      <h3>Biryani & Pulao</h3>
+      <div class="tbl"><table>
+        <thead><tr><th>Rs</th><th>Single</th><th>Medium</th><th>Double</th><th>1 KG</th></tr></thead>
+        <tbody><tr class="hot"><td><b>Beef Pulao</b><span class="ur">بیف پلاؤ</span></td><td>400</td><td>480</td><td>640</td><td>1,100</td></tr><tr><td><b>Chicken Biryani</b><span class="ur">چکن بریانی</span></td><td>320</td><td>400</td><td>580</td><td>1,000</td></tr><tr><td><b>Chicken Pulao</b><span class="ur">چکن پلاؤ</span></td><td>320</td><td>400</td><td>580</td><td>1,000</td></tr><tr><td><b>Sada Biryani / Pulao</b><span class="ur">سادہ بریانی / پلاؤ</span></td><td>200</td><td>—</td><td>350</td><td>550</td></tr></tbody>
+      </table></div>
     </div>
-    <p class="note">* Prices subject to change. Want it less spicy? Just ask — we'll go easy on the chillies.</p>
+    <div class="menu-cols"><div class="mcat reveal"><h3>Salan & Karahi</h3><div class="item"><h4>Chicken Karahi</h4><span class="dots"></span><span class="price">Rs 360</span></div><div class="item"><h4>Chicken Handi</h4><span class="dots"></span><span class="price">Rs 400</span></div><div class="item"><h4>Chicken Masala</h4><span class="dots"></span><span class="price">Rs 480</span></div><div class="item"><h4>Nihari</h4><span class="dots"></span><span class="price">Rs 430</span></div><div class="item"><h4>Aloo Gosht</h4><span class="dots"></span><span class="price">Rs 330</span></div><div class="item"><h4>Chicken Qorma</h4><span class="dots"></span><span class="price">Rs 300</span></div><div class="item"><h4>Chicken Qeema</h4><span class="dots"></span><span class="price">Rs 300</span></div><div class="item"><h4>Kaleji</h4><span class="dots"></span><span class="price">Rs 250</span></div><div class="item"><h4>Daal Gosht</h4><span class="dots"></span><span class="price">Rs 330</span></div><div class="item"><h4>Murgh Chana</h4><span class="dots"></span><span class="price">Rs 330</span></div></div><div class="mcat reveal"><h3>Daal, Sabzi & Anda</h3><div class="item"><h4>Anda Ghotala</h4><span class="dots"></span><span class="price">Rs 260</span></div><div class="item"><h4>Anda Chana</h4><span class="dots"></span><span class="price">Rs 250</span></div><div class="item"><h4>Daal Chana</h4><span class="dots"></span><span class="price">Rs 200</span></div><div class="item"><h4>Daal Mash</h4><span class="dots"></span><span class="price">Rs 210</span></div><div class="item"><h4>Daal Moong</h4><span class="dots"></span><span class="price">Rs 200</span></div><div class="item"><h4>Daal Chawal</h4><span class="dots"></span><span class="price">Rs 250</span></div><div class="item"><h4>Daal Ghotala</h4><span class="dots"></span><span class="price">Rs 330</span></div><div class="item"><h4>Sabzi</h4><span class="dots"></span><span class="price">Rs 200</span></div><div class="item"><h4>Karhi</h4><span class="dots"></span><span class="price">Rs 230</span></div><div class="item"><h4>Salan Fry</h4><span class="dots"></span><span class="price">Rs 60</span></div></div><div class="mcat reveal"><h3>Kabab, Roti & Extras</h3><div class="item"><h4>Chapli Kabab</h4><span class="dots"></span><span class="price">Rs 120</span></div><div class="item"><h4>Shami Kabab</h4><span class="dots"></span><span class="price">Rs 100</span></div><div class="item"><h4>Roti</h4><span class="dots"></span><span class="price">Rs 30</span></div><div class="item"><h4>Laal Naan</h4><span class="dots"></span><span class="price">Rs 30</span></div><div class="item"><h4>Chapati</h4><span class="dots"></span><span class="price">Rs 20</span></div><div class="item"><h4>Salad</h4><span class="dots"></span><span class="price">Rs 50</span></div><div class="item"><h4>Raita</h4><span class="dots"></span><span class="price">Rs 40</span></div><div class="item"><h4>Zarda</h4><span class="dots"></span><span class="price">Rs 120</span></div></div></div>
+    <p class="note">* Cold drinks & mineral water bhi dastiyab hain. Prices badal sakti hain — order se pehle call kar ke confirm kar lein. We make all types of food — catering & dawat orders welcome.</p>
   </div>
 </section>
 
@@ -253,7 +267,7 @@
       <div class="info reveal">
         <div class="info-row"><div class="ic">📍</div><div><b>Address</b><span>11-C, Mohammad Ali Society (MACHS),<br>Karachi, Pakistan</span></div></div>
         <div class="info-row"><div class="ic">🕙</div><div><b>Hours</b><span>Every day · 10:00 AM – 12:00 AM</span><br><span class="open-badge" id="openBadge"></span></div></div>
-        <div class="info-row"><div class="ic">📞</div><div><b>Phone / WhatsApp</b><a href="tel:+923022256100">+92 302 2256100</a></div></div>
+        <div class="info-row"><div class="ic">📞</div><div><b>Phone / WhatsApp</b><a href="tel:+923022256100">0302 2256100</a> · <a href="tel:+923144461013">0314 4461013</a></div></div>
         <div class="ctas">
           <a href="tel:+923022256100" class="btn btn-primary">📞 Call Now</a>
           <a href="https://www.google.com/maps/dir/?api=1&destination=24.8752169,67.0874515" target="_blank" rel="noopener" class="btn btn-ghost">🧭 Directions</a>
