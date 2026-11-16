@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>G. Shabbir Restaurant — Beef Pulao & Biryani | PECHS / MACHS, Karachi</title>
+<meta name="description" content="G. Shabbir Restaurant — Karachi's spicy beef pulao and chicken biryani. 11-C Mohammad Ali Society (MACHS), Karachi. Open daily 10 AM – 12 AM. Call +92 302 2256100.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#1f1410; --cream:#fbf4e8; --paper:#fffaf2; --saffron:#e8a33a;
+    --chili:#b8321f; --leaf:#2f5d3a; --muted:#6e5a4c; --line:#ead9bf;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:Inter,system-ui,sans-serif;color:var(--ink);background:var(--paper);line-height:1.6}
+  h1,h2,h3{font-family:Fraunces,Georgia,serif;line-height:1.1}
+  a{color:inherit}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 22px}
+
+  /* Nav */
+  nav{position:sticky;top:0;z-index:20;background:rgba(255,250,242,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+  nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+  .logo{font-family:Fraunces,serif;font-weight:800;font-size:1.35rem;text-decoration:none}
+  .logo span{color:var(--chili)}
+  .links{display:flex;gap:26px;align-items:center}
+  .links a{text-decoration:none;font-weight:500;font-size:.95rem}
+  .links a:hover{color:var(--chili)}
+  .btn{display:inline-flex;align-items:center;gap:8px;padding:12px 22px;border-radius:999px;font-weight:600;text-decoration:none;transition:transform .15s, box-shadow .15s}
+  .btn:hover{transform:translateY(-2px)}
+  .btn-primary{background:var(--chili);color:#fff;box-shadow:0 6px 18px rgba(184,50,31,.3)}
+  .btn-wa{background:#25D366;color:#fff;box-shadow:0 6px 18px rgba(37,211,102,.3)}
+  .btn-ghost{border:2px solid var(--ink)}
+  .nav-cta{padding:9px 18px;font-size:.9rem}
+  @media(max-width:760px){.links a:not(.btn){display:none}}
+
+  /* Hero */
+  .hero{position:relative;overflow:hidden;background:
+      radial-gradient(circle at 85% 20%, rgba(232,163,58,.35), transparent 45%),
+      radial-gradient(circle at 10% 90%, rgba(184,50,31,.18), transparent 40%),
+      var(--cream)}
+  .hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;padding-top:80px;padding-bottom:90px}
+  .tag{display:inline-block;background:#fff;border:1px solid var(--line);padding:6px 14px;border-radius:999px;font-size:.85rem;font-weight:600;color:var(--leaf);margin-bottom:22px}
+  .hero h1{font-size:clamp(2.6rem,6vw,4.6rem);font-weight:800;letter-spacing:-.02em}
+  .hero h1 em{font-style:normal;color:var(--chili)}
+  .hero p.lead{font-size:1.15rem;color:var(--muted);margin:22px 0 32px;max-width:520px}
+  .hero .ctas{display:flex;flex-wrap:wrap;gap:12px}
+  .stats{display:flex;gap:34px;margin-top:40px}
+  .stats b{display:block;font-family:Fraunces,serif;font-size:1.8rem}
+  .stats small{color:var(--muted);font-size:.85rem}
+  /* Illustrated plate */
+  .plate{aspect-ratio:1;max-width:440px;margin-left:auto;width:100%;position:relative}
+  .plate svg{width:100%;height:100%;filter:drop-shadow(0 30px 40px rgba(60,30,10,.25))}
+  @media(max-width:860px){.hero .wrap{grid-template-columns:1fr;padding-top:50px}.plate{margin:0 auto;max-width:320px}}
+
+  /* Sections */
+  section{padding:90px 0}
+  .eyebrow{font-weight:600;color:var(--chili);text-transform:uppercase;letter-spacing:.12em;font-size:.8rem}
+  .sec-title{font-size:clamp(2rem,4vw,2.9rem);margin:10px 0 16px}
+  .sec-sub{color:var(--muted);max-width:600px}
+
+  /* Specials */
+  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:22px;margin-top:44px}
+  .card{background:#fff;border:1px solid var(--line);border-radius:22px;padding:28px;transition:transform .2s, box-shadow .2s}
+  .card:hover{transform:translateY(-4px);box-shadow:0 16px 36px rgba(60,30,10,.1)}
+  .card .icon{width:58px;height:58px;border-radius:16px;display:grid;place-items:center;font-size:1.8rem;margin-bottom:18px}
+  .card h3{font-size:1.4rem;margin-bottom:8px}
+  .card p{color:var(--muted);font-size:.97rem}
+  .pill{display:inline-block;margin-top:14px;font-size:.8rem;font-weight:600;padding:4px 10px;border-radius:999px;background:#fdecea;color:var(--chili)}
+
+  /* Menu */
+  #menu{background:var(--ink);color:var(--cream)}
+  #menu .sec-sub{color:#cbb8a6}
+  .menu-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px 60px;margin-top:44px}
+  .item{display:flex;align-items:baseline;gap:12px;padding:16px 0;border-bottom:1px dashed rgba(251,244,232,.2)}
+  .item h4{font-family:Fraunces,serif;font-size:1.2rem;font-weight:600}
+  .item small{display:block;color:#bba792;font-size:.88rem}
+  .item .dots{flex:1}
+  .item .price{color:var(--saffron);font-weight:600;white-space:nowrap}
+  .note{margin-top:28px;color:#a8937f;font-size:.88rem}
+  @media(max-width:760px){.menu-grid{grid-template-columns:1fr}}
+
+  /* Tip strip */
+  .tip{background:var(--saffron);padding:28px 0}
+  .tip .wrap{display:flex;gap:18px;align-items:center;justify-content:center;text-align:center;font-weight:600;font-size:1.1rem}
+
+  /* Visit */
+  .visit{display:grid;grid-template-columns:1fr 1.2fr;gap:36px;margin-top:44px}
+  .info{background:#fff;border:1px solid var(--line);border-radius:22px;padding:32px}
+  .info-row{display:flex;gap:16px;padding:16px 0;border-bottom:1px solid var(--line)}
+  .info-row:last-of-type{border:none}
+  .info-row .ic{font-size:1.4rem;width:32px}
+  .info-row b{display:block;margin-bottom:2px}
+  .info-row span,.info-row a{color:var(--muted);text-decoration:none}
+  .info .ctas{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+  .open-badge{display:inline-flex;align-items:center;gap:6px;font-size:.8rem;font-weight:600;padding:3px 10px;border-radius:999px;margin-top:6px}
+  .map{border-radius:22px;overflow:hidden;border:1px solid var(--line);min-height:380px}
+  .map iframe{width:100%;height:100%;min-height:380px;border:0;display:block}
+  @media(max-width:860px){.visit{grid-template-columns:1fr}}
+
+  footer{background:var(--cream);border-top:1px solid var(--line);padding:36px 0;font-size:.9rem;color:var(--muted)}
+  footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+
+  /* Floating WhatsApp */
+  .fab{position:fixed;right:20px;bottom:20px;width:60px;height:60px;border-radius:50%;background:#25D366;display:grid;place-items:center;box-shadow:0 10px 26px rgba(0,0,0,.25);z-index:30;transition:transform .2s}
+  .fab:hover{transform:scale(1.08)}
+  .fab svg{width:32px;height:32px;fill:#fff}
+
+  .reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease, transform .7s ease}
+  .reveal.in{opacity:1;transform:none}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a href="#" class="logo">G. Shabbir <span>Restaurant</span></a>
+    <div class="links">
+      <a href="#specials">Specials</a>
+      <a href="#menu">Menu</a>
+      <a href="#visit">Visit</a>
+      <a href="tel:+923022256100" class="btn btn-primary nav-cta">📞 Call to Order</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <div>
+      <span class="tag">📍 MACHS · Mohammad Ali Society, Karachi</span>
+      <h1>Karachi's <em>spicy</em><br>Beef Pulao.</h1>
+      <p class="lead">Fragrant rice, tender beef and a proper Karachi kick of hari mirch — plus chicken biryani made fresh every day. Dine in, take away or order for delivery.</p>
+      <div class="ctas">
+        <a href="https://wa.me/923022256100?text=Assalam%20o%20Alaikum%2C%20I%20want%20to%20place%20an%20order" class="btn btn-wa" target="_blank" rel="noopener">💬 Order on WhatsApp</a>
+        <a href="#menu" class="btn btn-ghost">View Menu</a>
+      </div>
+      <div class="stats">
+        <div><b>4.3 ★</b><small>563+ Google reviews</small></div>
+        <div><b>10am–12am</b><small>Open 7 days</small></div>
+        <div><b>Rs</b><small>Budget friendly</small></div>
+      </div>
+    </div>
+
+    <div class="plate" aria-hidden="true">
+      <svg viewBox="0 0 400 400">
+        <defs>
+          <radialGradient id="rice" cx="50%" cy="45%" r="55%">
+            <stop offset="0" stop-color="#fff6dc"/><stop offset=".7" stop-color="#f3d79a"/><stop offset="1" stop-color="#d9a85a"/>
+          </radialGradient>
+        </defs>
+        <circle cx="200" cy="200" r="190" fill="#fff" stroke="#ead9bf" stroke-width="4"/>
+        <circle cx="200" cy="200" r="160" fill="#f6ead3"/>
+        <ellipse cx="200" cy="205" rx="135" ry="125" fill="url(#rice)"/>
+        <!-- rice grains -->
+        <g fill="#fffaf0" opacity=".9">
+          <ellipse cx="140" cy="160" rx="9" ry="3" transform="rotate(30 140 160)"/>
+          <ellipse cx="255" cy="150" rx="9" ry="3" transform="rotate(-20 255 150)"/>
+          <ellipse cx="180" cy="270" rx="9" ry="3" transform="rotate(10 180 270)"/>
+          <ellipse cx="270" cy="250" rx="9" ry="3" transform="rotate(50 270 250)"/>
+          <ellipse cx="120" cy="230" rx="9" ry="3" transform="rotate(-40 120 230)"/>
+          <ellipse cx="220" cy="120" rx="9" ry="3" transform="rotate(70 220 120)"/>
+          <ellipse cx="300" cy="200" rx="9" ry="3" transform="rotate(-10 300 200)"/>
+          <ellipse cx="160" cy="205" rx="9" ry="3" transform="rotate(80 160 205)"/>
+        </g>
+        <!-- beef pieces -->
+        <g fill="#6b3416">
+          <path d="M165 180 q20 -18 42 -4 q10 18 -8 30 q-26 8 -34 -26z"/>
+          <path d="M228 200 q22 -10 36 8 q4 22 -18 26 q-24 -4 -18 -34z"/>
+          <path d="M175 238 q18 -8 30 6 q2 18 -16 20 q-18 -4 -14 -26z"/>
+        </g>
+        <g fill="#8a4a24" opacity=".7">
+          <circle cx="185" cy="188" r="5"/><circle cx="245" cy="212" r="4"/><circle cx="188" cy="247" r="4"/>
+        </g>
+        <!-- birista -->
+        <g stroke="#9b5a1c" stroke-width="4" stroke-linecap="round" fill="none">
+          <path d="M140 190 q8 -8 16 0"/><path d="M250 165 q8 -8 16 0"/><path d="M230 265 q8 -8 16 0"/>
+          <path d="M290 230 q6 -6 12 0"/><path d="M135 255 q6 -6 12 0"/><path d="M205 150 q6 -6 12 0"/>
+        </g>
+        <!-- green chillies -->
+        <g fill="#3f8a3a">
+          <path d="M110 140 q40 10 60 -12 q-2 10 -12 18 q-26 12 -48 -6z"/>
+          <path d="M280 290 q-30 -6 -48 12 q12 4 22 -2 q18 -4 26 -10z"/>
+        </g>
+        <g fill="#2a5e26"><rect x="166" y="124" width="10" height="5" rx="2" transform="rotate(-30 171 126)"/></g>
+        <!-- lemon -->
+        <path d="M295 120 a30 30 0 0 1 30 30 l-30 0z" fill="#f4d23c" stroke="#e0b820" stroke-width="3"/>
+        <!-- mint -->
+        <g fill="#4f9a55"><ellipse cx="110" cy="300" rx="14" ry="7" transform="rotate(-30 110 300)"/><ellipse cx="125" cy="315" rx="12" ry="6" transform="rotate(20 125 315)"/></g>
+      </svg>
+    </div>
+  </div>
+</header>
+
+<section id="specials">
+  <div class="wrap">
+    <span class="eyebrow">What we're known for</span>
+    <h2 class="sec-title reveal">Made fresh, every single day</h2>
+    <p class="sec-sub reveal">Simple food done the Karachi way — big flavour, honest portions, fair prices.</p>
+    <div class="cards">
+      <div class="card reveal">
+        <div class="icon" style="background:#fdecea">🍛</div>
+        <h3>Beef Pulao</h3>
+        <p>Our signature. Long-grain rice slow-cooked in rich beef yakhni, finished with whole spices and fresh green chillies.</p>
+        <span class="pill">🌶️ House favourite</span>
+      </div>
+      <div class="card reveal">
+        <div class="icon" style="background:#fff3dc">🍗</div>
+        <h3>Chicken Biryani</h3>
+        <p>Layered, aromatic and properly masaledar — the classic Karachi biryani with tender chicken and potato.</p>
+        <span class="pill" style="background:#fff3dc;color:#a8681a">Daily fresh</span>
+      </div>
+      <div class="card reveal">
+        <div class="icon" style="background:#e7f1e8">🧅</div>
+        <h3>Extra Birista</h3>
+        <p>Love crispy fried onions? Ask us to add extra birista on top of your pulao — regulars swear by it.</p>
+        <span class="pill" style="background:#e7f1e8;color:var(--leaf)">Pro tip</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="menu">
+  <div class="wrap">
+    <span class="eyebrow" style="color:var(--saffron)">Menu</span>
+    <h2 class="sec-title reveal">Plates & portions</h2>
+    <p class="sec-sub reveal">Dine in, take away, or call ahead for delivery. Bulk orders for dawats and office lunches welcome.</p>
+
+    <div class="menu-grid">
+      <div class="item"><div><h4>Beef Pulao — Plate</h4><small>Served with raita & salad</small></div><span class="dots"></span><span class="price">Rs ___</span></div>
+      <div class="item"><div><h4>Chicken Biryani — Plate</h4><small>Served with raita & salad</small></div><span class="dots"></span><span class="price">Rs ___</span></div>
+      <div class="item"><div><h4>Beef Pulao — Half Kg</h4><small>Takeaway / delivery</small></div><span class="dots"></span><span class="price">Rs ___</span></div>
+      <div class="item"><div><h4>Chicken Biryani — Half Kg</h4><small>Takeaway / delivery</small></div><span class="dots"></span><span class="price">Rs ___</span></div>
+      <div class="item"><div><h4>Beef Pulao — 1 Kg</h4><small>Family size</small></div><span class="dots"></span><span class="price">Rs ___</span></div>
+      <div class="item"><div><h4>Chicken Biryani — 1 Kg</h4><small>Family size</small></div><span class="dots"></span><span class="price">Rs ___</span></div>
+      <div class="item"><div><h4>Raita</h4><small>Extra</small></div><span class="dots"></span><span class="price">Rs ___</span></div>
+      <div class="item"><div><h4>Cold Drink</h4><small>Regular / 1.5L</small></div><span class="dots"></span><span class="price">Rs ___</span></div>
+    </div>
+    <p class="note">* Prices subject to change. Want it less spicy? Just ask — we'll go easy on the chillies.</p>
+  </div>
+</section>
+
+<div class="tip">
+  <div class="wrap">🎉 Dawat, office lunch or Jummah order? Call ahead for degs & bulk orders.</div>
+</div>
+
+<section id="visit">
+  <div class="wrap">
+    <span class="eyebrow">Visit us</span>
+    <h2 class="sec-title reveal">Come hungry.</h2>
+    <div class="visit">
+      <div class="info reveal">
+        <div class="info-row"><div class="ic">📍</div><div><b>Address</b><span>11-C, Mohammad Ali Society (MACHS),<br>Karachi, Pakistan</span></div></div>
+        <div class="info-row"><div class="ic">🕙</div><div><b>Hours</b><span>Every day · 10:00 AM – 12:00 AM</span><br><span class="open-badge" id="openBadge"></span></div></div>
+        <div class="info-row"><div class="ic">📞</div><div><b>Phone / WhatsApp</b><a href="tel:+923022256100">+92 302 2256100</a></div></div>
+        <div class="ctas">
+          <a href="tel:+923022256100" class="btn btn-primary">📞 Call Now</a>
+          <a href="https://www.google.com/maps/dir/?api=1&destination=24.8752169,67.0874515" target="_blank" rel="noopener" class="btn btn-ghost">🧭 Directions</a>
+        </div>
+      </div>
+      <div class="map reveal">
+        <iframe loading="lazy" title="G. Shabbir Restaurant map" src="https://maps.google.com/maps?q=24.8752169,67.0874515&z=16&output=embed"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>© <span id="yr"></span> G. Shabbir Restaurant, Karachi</span>
+    <span>Website by MF Soft</span>
+  </div>
+</footer>
+
+<a class="fab" href="https://wa.me/923022256100?text=Assalam%20o%20Alaikum%2C%20I%20want%20to%20place%20an%20order" target="_blank" rel="noopener" aria-label="Order on WhatsApp">
+  <svg viewBox="0 0 32 32"><path d="M16 3a13 13 0 0 0-11.2 19.6L3 29l6.6-1.7A13 13 0 1 0 16 3zm0 23.7c-2 0-4-.5-5.6-1.5l-.4-.2-3.9 1 1-3.8-.3-.4A10.7 10.7 0 1 1 16 26.7zm5.9-8c-.3-.2-1.9-.9-2.2-1-.3-.1-.5-.2-.7.2l-1 1.2c-.2.2-.4.2-.7.1-.3-.2-1.4-.5-2.6-1.6-1-.9-1.6-1.9-1.8-2.2-.2-.3 0-.5.1-.7l.5-.6.3-.5v-.5l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.1-1.2 2.8s1.2 3.2 1.4 3.5c.2.2 2.4 3.6 5.7 5 .8.4 1.4.6 1.9.7.8.3 1.5.2 2.1.1.6-.1 1.9-.8 2.2-1.5.3-.7.3-1.4.2-1.5-.1-.1-.3-.2-.6-.4z"/></svg>
+</a>
+
+<script>
+  document.getElementById('yr').textContent = new Date().getFullYear();
+  // Open/closed badge (Karachi time, open 10:00–24:00)
+  (function(){
+    const b = document.getElementById('openBadge');
+    const h = Number(new Intl.DateTimeFormat('en-GB',{hour:'numeric',hour12:false,timeZone:'Asia/Karachi'}).format(new Date()));
+    const open = h >= 10 && h < 24;
+    b.textContent = open ? '● Open now' : '● Closed — opens 10 AM';
+    b.style.background = open ? '#e7f1e8' : '#fdecea';
+    b.style.color = open ? '#2f5d3a' : '#b8321f';
+  })();
+  // Reveal on scroll
+  const io = new IntersectionObserver(es => es.forEach(e => { if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} }), {threshold:.15});
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+</body>
+</html>
